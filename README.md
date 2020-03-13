@@ -1,6 +1,6 @@
-# Bundlewatch GitHub Action
+# Bundledash GitHub Action
 
-This GitHub action allows you to easily run [bundlewatch](https://github.com/bundlewatch/bundlewatch) in your repository.
+This GitHub action allows you to easily run [bundledash](https://github.com/pauloportella/bundledash) in your repository.
 
 ## How to use:
 
@@ -33,7 +33,7 @@ This GitHub action allows you to easily run [bundlewatch](https://github.com/bun
 4. Setup a workflow.yml for your tracked branch. For example, if you are tracking the bundlesize of master branch, you should create a workflow whenever a `push` to `master` happen like so:
 
    ```yml
-   name: 'Bundlewatch Github Action - on Tracked Branches Push'
+   name: 'Bundledash Github Action - on Tracked Branches Push'
 
    on:
      push:
@@ -50,7 +50,7 @@ This GitHub action allows you to easily run [bundlewatch](https://github.com/bun
          - uses: pauloportella/bundledash-gh-action@master
            with:
              build-script: yarn build:minify
-             bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+             bundlewatch-github-token: ${{ secrets.BUNDLEDASH_GITHUB_TOKEN }}
    ```
 
    You would probably want to change the `build-script` to whatever script you want to run to produce your output bundle.
@@ -60,7 +60,7 @@ This GitHub action allows you to easily run [bundlewatch](https://github.com/bun
 5. For adding statuses on pull requests, you can add another workflow for pull requests `synchronize` and `opened` events as following:
 
    ```yml
-   name: 'Bundlewatch Github Action'
+   name: 'Bundledash Github Action'
 
    on:
      pull_request:
@@ -76,7 +76,7 @@ This GitHub action allows you to easily run [bundlewatch](https://github.com/bun
          - uses: pauloportella/bundledash-gh-action@master
            with:
              build-script: yarn build:minify
-             bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+             bundlewatch-github-token: ${{ secrets.BUNDLEDASH_GITHUB_TOKEN }}
    ```
 
 ## Feedback
