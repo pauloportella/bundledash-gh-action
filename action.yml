@@ -1,0 +1,11 @@
+name: 'Bundlewatch Github Action'
+description: 'Run bundledash against your PR to keep those bundles in check! Update your package.json according to bundlewatch config'
+author: 'Paulo Portella'
+inputs:
+  build-script:
+    description: 'Optional — The build script for your project. Will be run before running bundlewatch'
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'lib/main.js'

@@ -1,0 +1,54 @@
+{
+  "name": "bundledash-gh-action",
+  "version": "0.0.5",
+  "private": true,
+  "description": "bundledash-gh-action",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc && rollup -c ./rollup.config.js",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test-build": "echo 'no need to build for testing in this repo'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloportella/bundledash-gh-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "bundlesize"
+  ],
+  "author": "Paulo Portella",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.0.0",
+    "@actions/exec": "^1.0.1",
+    "@actions/github": "^1.1.0",
+    "bundlewatch": "^0.2.5",
+    "universal-user-agent": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.7.4",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "jest": "^24.9.0",
+    "jest-circus": "^24.7.1",
+    "rollup": "^1.27.14",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-import-resolver": "^1.0.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
+  },
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "./lib/main.js",
+        "maxSize": "100 KB"
+      }
+    ]
+  }
+}
