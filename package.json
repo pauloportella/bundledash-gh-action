@@ -22,8 +22,8 @@
   "author": "Paulo Portella",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.0.0",
-    "@actions/exec": "^1.0.1",
+    "@actions/core": "^1.4.0",
+    "@actions/exec": "^1.1.0",
     "@actions/github": "^1.1.0",
     "bundlewatch": "^0.2.5",
     "universal-user-agent": "^4.0.0"
